@@ -16,9 +16,4 @@ class ServiceProvider extends BaseProvider
         $this->setup(__DIR__)
              ->publishMigrations();
     }
-
-    public function register()
-    {
-        //
-    }
 }
