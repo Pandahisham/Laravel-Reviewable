@@ -3,6 +3,7 @@
     "description": "Reviewable Polymorphic Eloquent Models for for Laravel 5",
     "require": {
         "php": ">=5.5.9",
+        "draperstudio/laravel-service-provider": "~1.0",
         "illuminate/database": "~5.0|~5.1"
     },
     "autoload": {

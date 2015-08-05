@@ -2,19 +2,19 @@
 
 namespace DraperStudio\Reviewable;
 
-use Illuminate\Support\ServiceProvider as IlluminateProvider;
+use DraperStudio\ServiceProvider\ServiceProvider as BaseProvider;
 
 /**
  * Class ServiceProvider.
  */
-class ServiceProvider extends IlluminateProvider
+class ServiceProvider extends BaseProvider
 {
+    protected $packageName = 'reviewable';
+
     public function boot()
     {
-        $migrationFrom = __DIR__.'/../database/migrations/create_reviews_table.php';
-        $migrationTo = database_path('/migrations/'.date('Y_m_d_His', time()).'_create_reviews_table.php');
-
-        $this->publishes([$migrationFrom => $migrationTo], 'migrations');
+        $this->setup(__DIR__)
+             ->publishMigrations();
     }
 
     public function register()
