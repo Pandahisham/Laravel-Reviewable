@@ -5,7 +5,7 @@
 First, pull in the package through Composer.
 
 ```js
-composer require draperstudio/laravel-reviewable
+composer require draperstudio/laravel-reviewable:1.0.*@dev
 ```
 
 And then include the service provider within `app/config/app.php`.
